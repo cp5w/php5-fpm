@@ -29,7 +29,7 @@ when "ubuntu", "debian"
 											'php5-gd'
 										] #Option to add more or remove, override if needed or disable
 
-when "centos", "redhat", "fedora"
+when "centos", "redhat", "fedora", "amazon"
 	default["php_fpm"]["package"] = "php-fpm"
 	default["php_fpm"]["base_path"] = "/etc"
 	default["php_fpm"]["conf_file"] = "php-fpm.conf"
