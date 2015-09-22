@@ -29,7 +29,7 @@ when "ubuntu", "debian"
 											'php5-gd'
 										] #Option to add more or remove, override if needed or disable
 
-when "centos", "redhat", "fedora", "amazon"
+when "centos", "redhat", "fedora"
 	default["php_fpm"]["package"] = "php-fpm"
 	default["php_fpm"]["base_path"] = "/etc"
 	default["php_fpm"]["conf_file"] = "php-fpm.conf"
@@ -40,6 +40,15 @@ when "centos", "redhat", "fedora", "amazon"
 											'php-curl', 
 											'php-gd'
 											] #Option to add more or remove, override if needed or disable
+
+when "amazon"
+    default["php_fpm"]["package"] = "php56-fpm"
+    default["php_fpm"]["base_path"] = "/etc"
+    default["php_fpm"]["conf_file"] = "php-fpm-5.6.conf"
+    default["php_fpm"]["pools_path"] = "#{node["php_fpm"]["base_path"]}/php-fpm-5.6.d"
+    default["php_fpm"]["pools_include"] = "include=#{node["php_fpm"]["pools_path"]}/*.conf"
+    default["php_fpm"]["php_modules"] = [ ] #Option to add more or remove, override if needed or disable
+
 end
 
 #Set php-fpm.conf configuration
