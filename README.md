@@ -1,5 +1,7 @@
 PHP5-FPM Cookbook
 =====
+
+[![Join the chat at https://gitter.im/cp5w/php5-fpm](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cp5w/php5-fpm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Adding pools can be done by way of LWRP provider or by modifying JSON directly in the attributes file or overriding the attributes through other methods, environments, roles, etc.  Usage of the receipes beyond ::install is optional and not
 needed if using the LWRP provider.
 
